@@ -1,18 +1,28 @@
 <template>
-  <h1>{{ message }}</h1>
-  <HelloWorld />
+  <!-- Remove & use example component! -->
+  <HelloWorld
+    :msg="message"
+    @click="handler" />
+  <HelloWorld msg="Good" />
 </template>
 
 <script>
 import HelloWorld from '~/components/HelloWorld'
+
 export default {
   components: {
-    HelloWorld,
+    HelloWorld
   },
   data() {
     return {
-      message: 'Hello Vue!',
+      message: 'Hello Vue!'
     }
   },
+  methods: {
+    handler() {
+      console.log(this.message)
+      this.message += '!'
+    }
+  }
 }
 </script>
