@@ -1,0 +1,11 @@
+$color--black: black;
+$color--red: red;
+
+body {
+  background-color: $color--black;
+  h1 {
+    color: $color--red;
+    font-size: 40px;
+    display: flex;
+  }
+}
